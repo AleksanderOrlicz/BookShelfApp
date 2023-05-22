@@ -6,7 +6,7 @@ internal class Program
 {
     private static void Main(string[] args)
     {
-        var sqlRepository = new SqlRepository(new BookShelfAppDbContext());
+        var sqlRepository = new SqlRepository<Book>(new BookShelfAppDbContext());
         sqlRepository.Add(new Book { Title = "Mechanik" });
         sqlRepository.Add(new Book { Title = "Homo deus" });
         sqlRepository.Add(new Book { Title = "Diuna" });

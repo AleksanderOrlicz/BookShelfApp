@@ -2,10 +2,15 @@
 
 namespace BookShelfApp.Repositories
 {
-    public class GenericRepository<T>
-        where T : class, IEntity, new()        
-    {              
+    public class ListRepository<T> : IRepository<T>
+        where T : class, IEntity, new()
+    {
         private readonly List<T> _items = new();
+
+        public IEnumerable<T> GetAll()
+        {
+            return _items.ToList();
+        }
 
         public void Add(T item)
         {
@@ -25,10 +30,7 @@ namespace BookShelfApp.Repositories
 
         public void Save()
         {
-            foreach (var item in _items)
-            {
-                Console.WriteLine(item);
-            }
+            //save is not required in list
         }
     }
 }
