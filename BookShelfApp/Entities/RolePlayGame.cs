@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace BookShelfApp.Entities
 {
-    internal class RolePlayGame : BoardGame
+    public class RolePlayGame : BoardGame
     {
         public override string ToString() => base.ToString() + "Role Play Game";
 

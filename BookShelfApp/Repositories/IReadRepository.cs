@@ -2,8 +2,10 @@
 
 namespace BookShelfApp.Repositories
 {
-    public interface IRepository<T> : IReadRepository<T>, IWriteRepository<T>
+    public interface IReadRepository<out T>
         where T : class, IEntity
-    {        
+    {
+        IEnumerable<T> GetAll();
+        T GetById(int id);
     }
 }
