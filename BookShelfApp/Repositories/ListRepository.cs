@@ -32,5 +32,11 @@ namespace BookShelfApp.Repositories
         {
             //save is not required in list
         }
+
+        public void RemoveById(int Id)
+        {
+            var toRemove = GetById(Id);
+            Remove(toRemove);
+        }
     }
 }

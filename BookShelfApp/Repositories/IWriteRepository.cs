@@ -7,6 +7,7 @@ namespace BookShelfApp.Repositories
     {
         void Add(T item);
         void Remove(T item);
+        void RemoveById(int Id);
         void Save();
     }
 }
