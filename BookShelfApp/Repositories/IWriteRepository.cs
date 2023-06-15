@@ -6,6 +6,7 @@ namespace BookShelfApp.Repositories
         where T : class, IEntity
     {
         void Add(T item);
+        void Read (T item);
         void Remove(T item);
         void RemoveById(int Id);
         void Save();

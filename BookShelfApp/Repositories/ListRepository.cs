@@ -38,5 +38,10 @@ namespace BookShelfApp.Repositories
             var toRemove = GetById(Id);
             Remove(toRemove);
         }
+
+        public void Read(T item)
+        {            
+            _items.Add(item);
+        }
     }
 }
